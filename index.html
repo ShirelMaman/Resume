@@ -20,16 +20,25 @@
 
     <h1>Contatct Info</h1>
     <table border= "1">
+    
         <tr>
             <td>
-                0523051516
+               <img img style="width:50px; height:50px;" src="C:\Users\avima\Documents\GitHub\Resume\לוגו טלפון.jpg"> 
+            </td>
+            <td>
+                052-3051516
             </td>
         </tr>
+
         <tr>
             <td>
-                ShirelMaman12@gmail.com
+               <img img style="width:50px; height:50px;" src="C:\Users\avima\Documents\GitHub\Resume\לוגו מייל.png"> </td>
+            <td> 
+                <a href="mailto: shirelmaman12@gmail.com">
+                ShirelMaman12@gmail.com </a>
             </td>
         </tr>
+                
     </table>
     <table border= "1">
         <tr>
@@ -38,8 +47,12 @@
     </table>
 
     <h1>Education History</h1>
-
-    <h1>Working History</h1>
+    <ul>
+        <li>
+            2018-Today : <a href="https://www.yvc.ac.il/%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99-%D7%9C%D7%99%D7%9E%D7%95%D7%93/b-sc-%D7%91%D7%9E%D7%A2%D7%A8%D7%9B%D7%95%D7%AA-%D7%9E%D7%99%D7%93%D7%A2/" 
+            target = "_blank">B.sc Information Systems - Jezreel Valley Academic College</a>
+        </li>
+    </ul>
 
         <h1>Write To Me</h1>
         <table>
@@ -47,21 +60,27 @@
                 <fieldset>
                     <legend>Detalis:</legend>
 
-                    <label>Name</label>
-                    <input type="text" id="Name"> 
+                    <label for= "name">Name</label>
+                    <input type="text" id="name"> 
                     <br> <br>
 
-                    <label>Gender</label>
-                    <input type="radio" name="Gender" value = "Male"> Male
-                    <input type="radio" name="Gender" value = "FeMale"> Female
+                    <label for= "gender">Gender</label>
+                    <br>
+                    <input type="radio" id="gender" value = "Male"> Male
+                    <br>
+                    <input type="radio" id="gender" value = "FeMale"> Female
                     <br> <br>
 
-                    <label>Mail</label>
-                    <input type="text" id="Mail"> 
+                    <label for="email">Mail</label>
+                    <input type="text" id="email"> 
                     <br> <br>
+
+                    <label for="birthday">BirthDay</label>
+                    <input type="date" id="birthday">
+                    <br><br>
 
                     <label>State</label>
-                    <select name="area" id="">
+                    <select id="area">
                         <option value="N">
                             North
                         </option>
@@ -74,17 +93,31 @@
                     </select> 
                     <br><br>
 
-                    <textarea name="story" id="story" cols="30" rows="10">
+                    <textarea id="story" cols="30" rows="10"> Your Text:
                     </textarea> 
                     <br> <br>
 
-                    <button type= "button" onclick="">
+                    <button type= "button" onclick="funcs()">
                         Submit
                     </button>
 
                 </fieldset>
             </td>
+            <td>
+                <div id="Detalis">
+                </div>
+              </td> 
         </table>
+
+<script>
+        function funcs() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var birthday = document.getElementById("birthday").value;
+        var story = document.getElementById("story").value;
+        document.getElementById("Detalis").innerHTML = name +"<br>"+email+"<br>"+birthday+"<br>"+story;
+      } 
+ </script>
 
 </body>
 </html>
